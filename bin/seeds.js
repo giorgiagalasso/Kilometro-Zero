@@ -13,7 +13,8 @@ mongoose.connect(MONGO_URI, {
 });
 
 
-const nativeProducts = [{
+const nativeProducts = [
+  {
     
     name: "Lunette",
     category: "Self Care",
@@ -25,7 +26,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "../public/images/LUNETTE copy.jpg",
   }, 
 
   {
@@ -39,7 +40,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "String"
   },
   {
     
@@ -53,7 +54,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "String"
   },
 
   {
@@ -68,7 +69,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "String"
   },
 
   {
@@ -83,7 +84,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "String",
   },
 
   {
@@ -98,7 +99,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "String"
   },
 
   {
@@ -113,7 +114,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "String"
   },
   {
     
@@ -127,7 +128,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "String"
   },
 
   {
@@ -142,7 +143,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "String"
   },
   {
     
@@ -156,7 +157,7 @@ const nativeProducts = [{
         username: String,
         comment: String,
     }],
-    imageUrl: String
+    imageUrl: "String"
   },
 ];
 

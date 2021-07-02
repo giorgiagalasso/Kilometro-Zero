@@ -1,1 +1,17 @@
-<h1>log in</h1>
+<h2>Log in</h2>
+
+<form action="/signup" method="POST" enctype="multipart/form-data">
+    <label>Username</label>
+    <input type="text" name="username" required/>
+    
+    <label>Password</label>
+    <input type="password" name="password" required/>
+   
+    
+    <button type="submit">login</button>
+</form>
+{{#if errorMessage}}
+<p>{{errorMessage}}</p>
+{{/if}}
+
+<p>Don't have an account? Go <a href="/signup">here</a> to Sign-up! </p>

@@ -45,6 +45,8 @@ router.post("/signup", fileUpload.single("image"), async (req, res) => {
     res.redirect("/");
 });
 
+
+
 router.get("/login", (req, res) =>{
     res.render("auth/login");
 });
