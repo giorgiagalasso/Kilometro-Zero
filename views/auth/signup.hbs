@@ -1,0 +1,14 @@
+<h2>Signup</h2>
+<form action="/signup" method="POST" enctype="multipart/form-data">
+    <label>Username</label>
+    <input type="text" name="username" required/>
+    
+    <label>Password</label>
+    <input type="password" name="password" required/>
+    <label>Image</label>
+    <input type="file" name="image" />
+    <button type="submit">Create an account</button>
+</form>
+{{#if errorMessage}}
+<p>{{errorMessage}}</p>
+{{/if}}
