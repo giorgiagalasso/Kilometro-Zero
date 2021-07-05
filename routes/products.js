@@ -24,9 +24,9 @@ function requireAdmin(req, res, next) {
 }
 
 
-router.get("/home", async (req, res) => {
+router.get("/productlist", async (req, res) => {
     const products = await Product.find().sort({name: 1}); 
-    res.render("products/homepage", { products });
+    res.render("products/productlist", { products });
 });
 
 
@@ -83,6 +83,24 @@ router.post("/reviews/:productId/add", async (req, res) =>{
     });
     res.redirect(`/products/${req.params.productId}`)
 });
+
+router.get("/selfcare", async (req, res) => {
+    const scProducts = await Product.find({category: "Self Care"}).sort({name: 1});
+    res.render("products/selfcare", {scProducts});
+
+})
+
+router.get("/togo", async (req, res) => {
+    const toGo = await Product.find({category: "To go"}).sort({name: 1});
+    res.render("products/togo", {toGo});
+
+})
+
+router.get("/ecohome", async (req, res) => {
+    const ecoHome = await Product.find({category: "Eco home"}).sort({name: 1});
+    res.render("products/ecohome", {ecoHome});
+
+})
 
 
 
