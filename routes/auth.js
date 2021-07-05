@@ -50,6 +50,7 @@ router.post("/signup", fileUpload.single("image"), async (req, res) => {
 router.get("/login", (req, res) =>{
     res.render("auth/login");
 });
+
 router.post("/login", async (req, res) =>{
    const {username, password} = req.body;
     if ( !username || !password ) {

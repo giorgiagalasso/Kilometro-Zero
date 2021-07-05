@@ -19,13 +19,13 @@
     <a class="nav-link active" aria-current="page" href="/">Home</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Products</a>
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Store</a>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Self care</a></li>
       <li><a class="dropdown-item" href="#">To go</a></li>
       <li><a class="dropdown-item" href="#">Eco home</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Reviews</a></li>
+      
     </ul>
   </li>
   <li class="nav-item">
@@ -36,9 +36,13 @@
   </li>
 </ul>
 
+
 <a href="/signup">Sign Up</a>
 <a href="/login">Log In</a>
-
+<form action="/logout" method="POST">
+          <button type="submit"> Logout</button>
+        </form>
+        
       {{{body}}}
 
       <script src="/js/script.js"></script>
