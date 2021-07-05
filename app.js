@@ -70,6 +70,9 @@ app.use("/", products);
 const user = require("./routes/user");
 app.use("/", user);
 
+const tricksntips = require("./routes/tipsTricks");
+app.use("/", tricksntips);
+
 
 
 
