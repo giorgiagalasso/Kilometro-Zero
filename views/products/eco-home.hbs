@@ -8,5 +8,29 @@
  
 </div>
 
+{{/each}}
 
+<hr>
+<p>Add Review</p>
+<form action="/reviews/{{id}}/add" method="POST">
+    <label>Username</label>
+    <input type="text" name="username" />
+
+    <label>Comment</label>
+    <textarea name="comment"></textarea>
+
+    <button type="submit">Review!</button>
+</form>
+
+<hr>
+
+<h3>All reviews</h3>
+{{#unless reviews}}
+<h2>No comments have been made!</h2>
+{{/unless}}
+
+{{#each reviews}}
+<h4>{{username}}:</h4>
+<p>{{comment}}</p>
+<hr>
 {{/each}}

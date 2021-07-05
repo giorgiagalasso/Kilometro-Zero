@@ -64,21 +64,21 @@ router.post("/product-create", fileUpload.single("image"), async (req, res) =>{ 
 
 
 router.get("/products/:productId/edit", async (req, res) =>{
-    const productsToEdit = await Product.findById(req.params.productId); //this gets the books params which is equal to the details
+    const productsToEdit = await Product.findById(req.params.productId);
     res.render("products/products-edit", {productsToEdit});
 });
 
 
-// fills in the spaces automatically when u press the book link - was deleted
-router.post("/products/:productsId/delete", requireAdmin, async (req, res) =>{
+
+router.post("/products/:productId/delete", async (req, res) =>{
     await Product.findByIdAndDelete(req.params.productId);
-    res.redirect("/home");
+    res.redirect("/productlist");
 });
 
 
 router.post("/reviews/:productId/add", async (req, res) =>{
     const {username, comment} = req.body;
-    await Book.findByIdAndUpdate(req.params.productId, {
+    await Product.findByIdAndUpdate(req.params.productId, {
         $push: {reviews: {username, comment}},
     });
     res.redirect(`/products/${req.params.productId}`)
@@ -101,7 +101,6 @@ router.get("/ecohome", async (req, res) => {
     res.render("products/eco-home", {ecoHome});
 
 })
-
 
 
 module.exports = router;
