@@ -14,3 +14,13 @@
 <p>Reviews: {{reviews}} </p>
 
 <a href="/products/{{_id}}/edit">Edit Product</a>
+
+<hr>
+<p>Add Review</p>
+<form action="/reviews/{{id}}/add" method="POST">
+    <label>Username</label>
+    <input type="text" name="username" />
+    <label>Comment</label>
+    <textarea name="comment"></textarea>
+    <button type="submit">Review!</button>
+</form>
