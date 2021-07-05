@@ -72,7 +72,7 @@ router.post("/login", async (req, res) =>{
         
         req.session.currentUser = user;
         
-        res.redirect("/");
+        res.redirect("/profile");
     } else {
         
         res.render("auth/login", {
@@ -88,6 +88,8 @@ router.get("/usersList", async (req, res) => {
     const users = await User.find().sort({username: 1});
     res.render("auth/users", { users });
 })
+
+
 
 
 

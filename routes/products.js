@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Product = require("../models/Product.model");
-//const Author = require("../models/Author.model");
+const User = require("../models/User.model");
 const fileUpload = require("../config/cloudinary");
+
 
 function requireLogin(req, res, next) { 
     if (req.session.currentUser) {
@@ -22,10 +23,12 @@ function requireAdmin(req, res, next) {
     }
 }
 
+
 router.get("/home", async (req, res) => {
     const products = await Product.find().sort({name: 1}); 
     res.render("products/homepage", { products });
 });
+
 
 router.get("/products/:productId", async (req, res) =>{
     const productDetail = await Product.findById(req.params.productId);
@@ -33,11 +36,53 @@ router.get("/products/:productId", async (req, res) =>{
 });
 
 
-router.get("/product-create", requireAdmin, requireLogin, async (req, res) =>{
+router.get("/product-create", requireLogin, async (req, res) =>{
     const allProducts = await Product.find().sort({ name: 1});
     res.render("products/product-create", {allProducts});
 });
 
+
+router.post("/product-create", fileUpload.single("image"), async (req, res) =>{ //adding another middleware and it brings
+    let fileUrlOnCloudinary = ""; //the url of the img adding it to the book create since it's a property in the model
+    if (req.file){
+        fileUrlOnCloudinary = req.file.path;
+    };
+    
+    const {name, category, description, rating, price, helpfulUrl, reviews} = req.body;
+    await Product.create({
+        name,
+        category,
+        description,
+        rating,
+        price, 
+        helpfulUrl,
+        reviews,
+        imageUrl: fileUrlOnCloudinary,
+    });
+    res.redirect("/home");
+});
+
+
+router.get("/products/:productId/edit", async (req, res) =>{
+    const productsToEdit = await Product.findById(req.params.productId); //this gets the books params which is equal to the details
+    res.render("products/products-edit", {productsToEdit});
+});
+
+
+// fills in the spaces automatically when u press the book link - was deleted
+router.post("/products/:productsId/delete", requireAdmin, async (req, res) =>{
+    await Product.findByIdAndDelete(req.params.productId);
+    res.redirect("/home");
+});
+
+
+router.post("/reviews/:productId/add", async (req, res) =>{
+    const {username, comment} = req.body;
+    await Book.findByIdAndUpdate(req.params.productId, {
+        $push: {reviews: {username, comment}},
+    });
+    res.redirect(`/products/${req.params.productId}`)
+});
 
 
 

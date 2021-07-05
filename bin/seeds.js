@@ -26,7 +26,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "../public/images/LUNETTE copy.jpg",
+    imageUrl: String,
   }, 
 
   {
@@ -40,7 +40,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "String"
+    imageUrl: String,
   },
   {
     
@@ -54,7 +54,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "String"
+    imageUrl: String,
   },
 
   {
@@ -69,7 +69,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "String"
+    imageUrl: String,
   },
 
   {
@@ -84,7 +84,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "String",
+    imageUrl: String,
   },
 
   {
@@ -99,7 +99,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "String"
+    imageUrl: String,
   },
 
   {
@@ -114,7 +114,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "String"
+    imageUrl: String,
   },
   {
     
@@ -128,7 +128,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "String"
+    imageUrl: String,
   },
 
   {
@@ -143,7 +143,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "String"
+    imageUrl: String,
   },
   {
     
@@ -157,7 +157,7 @@ const nativeProducts = [
         username: String,
         comment: String,
     }],
-    imageUrl: "String"
+    imageUrl: String,
   },
 ];
 

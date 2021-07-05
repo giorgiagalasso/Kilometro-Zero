@@ -1,0 +1,28 @@
+
+<h1>Create New Product</h1>
+
+<form action="/product-create" method="POST" enctype="multipart/form-data">
+    
+    <label>Name</label>
+    <input type="text" name="name" required/>
+    
+    <label>Category</label>
+    <input type="text" name="category" required />
+    
+    <label>Desciption</label>
+    <textarea row="3" cols="10" name="description" required></textarea>
+    
+    <label>Rating</label>
+    <input type="number" name="rating" required/>
+    
+    <label>Price</label>
+    <input type="text" name="price" required />
+    
+    <label>Helpful Link</label>
+    <input type="text" name="helpfulUrl" required />
+    
+    <label>Image</label>
+    <input type="file" name="image" required/>
+    
+    <button type="submit">Create</button>
+</form>

@@ -67,6 +67,9 @@ app.use("/", auth);
 const products = require("./routes/products");
 app.use("/", products);
 
+const user = require("./routes/user");
+app.use("/", user);
+
 
 
 
