@@ -21,7 +21,7 @@ function requireAdmin(req, res, next) {
     } else {
             res.redirect("/login");
     }
-}
+};
 
 
 router.get("/productlist", requireAdmin, async (req, res) => {
@@ -59,7 +59,7 @@ router.post("/product-create", fileUpload.single("image"), async (req, res) =>{ 
         reviews,
         imageUrl: fileUrlOnCloudinary,
     });
-    res.redirect("/home");
+    res.redirect("/");
 });
 
 
@@ -67,6 +67,22 @@ router.get("/products/:productId/edit", requireAdmin, async (req, res) =>{
     const productsToEdit = await Product.findById(req.params.productId);
     res.render("products/products-edit", {productsToEdit});
 });
+
+router.post("/products/:productId/edit", requireAdmin, async (req, res) =>{
+    const {name, category, description, rating, price, helpfulUrl, reviews} = req.body;
+    await Product.create({
+        name,
+        category,
+        description,
+        rating,
+        price, 
+        helpfulUrl,
+        reviews,
+        imageUrl: fileUrlOnCloudinary,
+    });
+    res.redirect("/");
+});
+
 
 
 
@@ -76,7 +92,7 @@ router.post("/products/:productId/delete", requireAdmin, async (req, res) =>{
 });
 
 
-router.post("/reviews/:productId/add", async (req, res) =>{
+router.post("/reviews/:productId/add", requireLogin, async (req, res) =>{
     const {username, comment} = req.body;
     await Product.findByIdAndUpdate(req.params.productId, {
         $push: {reviews: {username, comment}},

@@ -1,8 +1,12 @@
 <h1>Profile</h1>
 
+{{#if requireAdmin}}
+<a href="/productlist">Product List</a>
 <a href="/product-create">Create a Product</a>
+<a href="/products/{{_id}}/edit">Edit Product</a>
+{{/if}}
 
-<form action="/logout" method="POST">
-    <button type="submit"> Logout</button>
-</form>
+
+
+
 

@@ -72,7 +72,7 @@ router.post("/login", async (req, res) =>{
         
         req.session.currentUser = user;
         
-        res.redirect("/profile");
+        res.redirect("/");
     } else {
         
         res.render("auth/login", {
