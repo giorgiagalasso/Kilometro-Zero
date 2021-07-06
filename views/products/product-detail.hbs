@@ -1,7 +1,9 @@
 
 <h1>{{name}}</h1>
 
-<h3>Description: {{description}}</h3>
+<img src="{{imageUrl}}" alt="productImg" width="200px" height="200px">
+
+<p>Description: {{description}}</p>
 
 <p>Category: {{category}}</p>
 
@@ -9,18 +11,39 @@
 
 <p>Price:{{price}}</p>
 
-<p>Helpful link: {{helpfulUrl}}</p>
+<p>Helpful link: <a href="{{helpfulUrl}}">{{helpfulUrl}}</a></p>
 
 <p>Reviews: {{reviews}} </p>
 
+{{!-- if admin --}}
 <a href="/products/{{_id}}/edit">Edit Product</a>
+{{!-- /if --}}
+
 
 <hr>
+
 <p>Add Review</p>
+
 <form action="/reviews/{{id}}/add" method="POST">
     <label>Username</label>
     <input type="text" name="username" />
+
     <label>Comment</label>
     <textarea name="comment"></textarea>
+
     <button type="submit">Review!</button>
 </form>
+
+<hr>
+
+<h3>All reviews</h3>
+
+{{#unless reviews}}
+    <h2>No comments have been made!</h2>
+{{/unless}}
+
+{{#each reviews}}
+    <h4>{{username}}:</h4>
+    <p>{{comment}}</p>
+    <hr>
+{{/each}}

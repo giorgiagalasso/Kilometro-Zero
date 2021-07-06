@@ -15,33 +15,69 @@
 
    <body>
       
- <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/">Home</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Store</a>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="/selfcare">Self care</a></li>
-      <li><a class="dropdown-item" href="/togo">To go</a></li>
-      <li><a class="dropdown-item" href="/ecohome">Eco home</a></li>
-      <li><hr class="dropdown-divider"></li>
-      
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#"> ♥ Favourites</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/tricksntips" tabindex="-1" aria-disabled="true">Tips & Tricks</a>
-  </li>
-      <span class="navbar-text">
-        <a href="/signup">Sign Up</a> <a href="/login">Log In</a>
-      </span>
-</ul>
-        
-      {{{body}}}
+      <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Store</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/selfcare">Self Care</a></li>
+              <li><a class="dropdown-item" href="/togo">To Go</a></li>
+              <li><a class="dropdown-item" href="/ecohome">Eco Home</a></li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Favourites ♥ </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tricksntips" tabindex="-1" aria-disabled="true">Tips & Tricks</a>
+          </li>
+          
 
+      </ul>
+        
+    {{{body}}}
+
+
+
+
+
+
+
+      <footer class="page-footer font-small unique-color-dark pt-4">
+
+
+        <div class="container">
+
+          <ul class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+              <a href="/signup" class="btn btn-outline-white btn-rounded">Sign Up!</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/login" class="btn btn-outline-white btn-rounded">Login!</a>
+            </li>
+          </ul>
+
+        </div>
+
+    
+        {{#if loggedInUser}}
+        
+        <div>
+          <p>Hello <strong>{{loggedInUser}}</strong></p>
+        </div>
+        
+        {{/if}}
+      
+
+        {{!-- <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </div> --}}
+
+
+      </footer>
 
    </body>
 
