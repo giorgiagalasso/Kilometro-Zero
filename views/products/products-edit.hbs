@@ -1,6 +1,6 @@
 <h1>Edit Product</h1>
 
-<form action="/product/{{productsToEdit._id}}/edit" method="POST">
+<form action="/products/{{productsToEdit._id}}/edit" method="POST"  enctype="multipart/form-data">
     <label>Name</label>
     <input type="text" name="name" value="{{productsToEdit.name}}" />
     <label>Category</label>
@@ -13,6 +13,8 @@
     <input type="text" name="price" value="{{productsToEdit.price}}"/>
     <label>Link</label>
     <input type="text" name="helpfulUrl" value="{{productsToEdit.helpfulUrl}}"/> 
+    <label>Image</label>
+    <input type="file" name="image" />
     
     <button type="submit">Update</button>
 </form>
