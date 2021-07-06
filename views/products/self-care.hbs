@@ -1,16 +1,17 @@
 <h1>Self Care</h1>
 
-{{#each scProducts}}
+<div class="product-display">{{#each scProducts}}
 
-<div>
-
-    <h2> <a href="/products/{{_id}}">{{name}}</a></h2>
-    <img src="{{imageUrl}}" alt="selfcare" width="200px" height="200px">
-    <form action="/favourites/{{_id}}" method="post">
-    <button type="submit" value="{dbResult.id}" name="add_fav">Add To Favorites</button>
-    </form>
- 
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{imageUrl}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{description}}</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
 </div>
 
 
 {{/each}}
+</div>
+

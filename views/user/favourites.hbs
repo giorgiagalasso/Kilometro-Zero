@@ -2,7 +2,7 @@
 
 {{#each favourites}}
 <p> name -> {{product.name}} </p>
-<form action="">
-    <button>delete</button>
+<form action="/favourites/{{id}}/delete" method="POST">
+    <button type="submit">Delete</button>
 </form>
 {{/each}}

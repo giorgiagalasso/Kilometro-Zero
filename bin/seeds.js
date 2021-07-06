@@ -4,7 +4,7 @@ const Product = require("../models/Product.model");
 
 
 const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/Kilometro-Zero";
+ "mongodb+srv://admin:admin1996@cluster0.q81ks.mongodb.net/Cluster0?retryWrites=true&w=majority";
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

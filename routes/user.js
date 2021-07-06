@@ -1,17 +1,21 @@
 const router = require("express").Router();
 const User = require("../models/User.model");
-const bcrypt = require("bcryptjs");
-const fileUpload = require("../config/cloudinary");
-const FavouriteModel = require("../models/Favourite.model");
+const Favourite = require("../models/Favourite.model");
 
-
+function requireLogin(req, res, next) { 
+    if (req.session.currentUser) {
+        next();
+    } else {
+        res.redirect("/login")
+    }
+};
 
 router.get("/profile", (req, res) => {
     res.render ("user/profile");
 });
 
 router.post("/favourites/:productId", async(req,res) => {
-   await FavouriteModel.create({
+   await Favourite.create({
         user: req.session.currentUser,
         product: req.params.productId
     }),
@@ -20,7 +24,7 @@ router.post("/favourites/:productId", async(req,res) => {
 
 
 router.get("/favourites", async (req, res) => {
-    let favourites = await FavouriteModel.find({
+    let favourites = await Favourite.find({
         user: req.session.currentUser,
     }).populate('product');
     console.log(favourites);
@@ -31,12 +35,10 @@ router.get("/favourites", async (req, res) => {
 
 });
 
-
-
-
-
-
-
+router.post("/favourites/:productId/delete", requireLogin, async (req, res) => {
+    await Favourite.findByIdAndDelete(req.params.productId);
+    res.redirect("/favourites");
+});
 
 
 
