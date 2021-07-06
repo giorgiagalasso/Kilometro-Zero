@@ -24,7 +24,7 @@ function requireAdmin(req, res, next) {
 }
 
 
-router.get("/productlist", async (req, res) => {
+router.get("/productlist", requireAdmin, async (req, res) => {
     const products = await Product.find().sort({name: 1}); 
     res.render("products/product-list", { products });
 });
@@ -36,7 +36,7 @@ router.get("/products/:productId", async (req, res) =>{
 });
 
 
-router.get("/product-create", requireLogin, async (req, res) =>{
+router.get("/product-create", requireAdmin, async (req, res) =>{
     const allProducts = await Product.find().sort({ name: 1});
     res.render("products/product-create", {allProducts});
 });
@@ -63,14 +63,14 @@ router.post("/product-create", fileUpload.single("image"), async (req, res) =>{ 
 });
 
 
-router.get("/products/:productId/edit", async (req, res) =>{
+router.get("/products/:productId/edit", requireAdmin, async (req, res) =>{
     const productsToEdit = await Product.findById(req.params.productId);
     res.render("products/products-edit", {productsToEdit});
 });
 
 
 
-router.post("/products/:productId/delete", async (req, res) =>{
+router.post("/products/:productId/delete", requireAdmin, async (req, res) =>{
     await Product.findByIdAndDelete(req.params.productId);
     res.redirect("/productlist");
 });
