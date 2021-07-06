@@ -62,7 +62,7 @@ router.post("/product-create", fileUpload.single("image"), async (req, res) => {
 });
 
 
-router.get("/products/:productId/edit", async (req, res) => {
+router.get("/products/:productId/edit", requireAdmin, async (req, res) => {
     const productsToEdit = await Product.findById(req.params.productId);
     res.render("products/products-edit", {productsToEdit});
 });

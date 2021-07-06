@@ -1,3 +1,6 @@
 <h1>Welcome</h1>
-
-
+{{#if loggedInUser}}
+{{#eq loggedInUser.role "Admin"}}
+<a href="/productlist">Product list</a>
+{{/eq}}
+{{/if}}
