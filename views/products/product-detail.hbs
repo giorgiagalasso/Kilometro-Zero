@@ -16,8 +16,13 @@
 <p>Reviews: {{reviews}} </p>
 
 
-
+{{#if loggedInUser}}
+{{#eq loggedInUser.role "Admin"}}
 <a href="/products/{{_id}}/edit">Edit Product</a>
+{{/eq}}
+{{/if}}
+
+
 
 
 
