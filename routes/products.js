@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const Product = require("../models/Product.model");
 const User = require("../models/User.model");
 const fileUpload = require("../config/cloudinary");
@@ -19,7 +18,7 @@ function requireAdmin(req, res, next) {
         req.session.currentUser.role === "Admin"){
             next();
     } else {
-            res.redirect("/login");
+            res.redirect("/");
     }
 };
 
@@ -122,13 +121,13 @@ router.get("/selfcare", async (req, res) => {
 })
 
 router.get("/togo", async (req, res) => {
-    const toGo = await Product.find({category: "To go"}).sort({name: 1});
+    const toGo = await Product.find({category: "To Go"}).sort({name: 1});
     res.render("products/to-go", {toGo});
 
 })
 
 router.get("/ecohome", async (req, res) => {
-    const ecoHome = await Product.find({category: "Eco home"}).sort({name: 1});
+    const ecoHome = await Product.find({category: "Eco Home"}).sort({name: 1});
     res.render("products/eco-home", {ecoHome});
 
 })
