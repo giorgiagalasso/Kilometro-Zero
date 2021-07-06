@@ -28,15 +28,27 @@
               <li><hr class="dropdown-divider"></li>
             </ul>
           </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="/tricksntips" tabindex="-1" aria-disabled="true">Tips & Tricks</a>
+          </li>
+     
+
+          {{#if loggedInUser}}
           <li class="nav-item">
             <a class="nav-link" href="#"> Favourites ♥ </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/tricksntips" tabindex="-1" aria-disabled="true">Tips & Tricks</a>
-          </li>
-          
+          {{/if}}
 
-      </ul>
+           {{#if loggedInUser}}
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          {{/if}}
+
+           </ul>
+
+        
         
     {{{body}}}
 
@@ -58,6 +70,14 @@
             <li class="list-inline-item">
               <a href="/login" class="btn btn-outline-white btn-rounded">Login!</a>
             </li>
+        
+            {{#if loggedInUser}}
+            <li class="list-inline-item">
+                  <form action="/logout" method="POST">
+                  <button type="submit"> Logout</button>
+                  </form>
+            </li>
+            {{/if}}
           </ul>
 
         </div>

@@ -15,9 +15,11 @@
 
 <p>Reviews: {{reviews}} </p>
 
-{{!-- if admin --}}
+{{#if requireAdmin}}
+
 <a href="/products/{{_id}}/edit">Edit Product</a>
-{{!-- /if --}}
+
+{{/if}}
 
 
 <hr>
