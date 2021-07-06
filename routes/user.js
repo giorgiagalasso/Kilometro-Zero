@@ -17,6 +17,11 @@ router.get("/profile", requireAdmin, (req, res) => {
     res.render ("user/profile");
 });
 
+router.get("/favourites", (req, res) => {
+    res.render("user/favourites");
+
+});
+
 
 
 
