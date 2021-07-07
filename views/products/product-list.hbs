@@ -1,17 +1,20 @@
-{{#each products}}
+<div class="admin-product-list">
+    {{#each products}}
 
+    <br>
 
-<div>
-    <h2> <a href="/products/{{_id}}">{{name}}</a></h2>
-    <img src={{imageUrl}} alt="prodImsge" width="200px" height="200px">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{imageUrl}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title"><a href="/products/{{_id}}">{{name}}</a></h5>
+            <form action="/products/{{_id}}/delete" method="POST">
+                <button class="btn btn-primary" type="submit">Delete</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <br>
+
+    {{/each}}    
 </div>
-<br><br>
-
-<a href="/product-create">Create a Product</a>
-
-<form action="/products/{{_id}}/delete" method="POST">
-        <button type="submit">Delete</button>
-</form>
-
-
-{{/each}}

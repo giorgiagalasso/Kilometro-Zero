@@ -1,6 +1,23 @@
-<h1>Welcome</h1>
-{{#if loggedInUser}}
-{{#eq loggedInUser.role "Admin"}}
-<a href="/productlist">Product list</a>
-{{/eq}}
-{{/if}}
+<div class="index">
+    <div class="index-general">
+        <h2>Start your sustainble journey at Kilometro-Zero</h2>
+        <h4>A soon-to-be store that cares about giving you the best choices for the environment and your life.</h4>        
+    </div>
+
+
+    <div class="index-admin">
+
+        {{#if loggedInUser}}
+            {{#eq loggedInUser.role "Admin"}}
+                <a href="/productlist">Product list</a>
+                <a href="/product-create">Create a Product</a>
+            {{/eq}}
+        {{/if}}  
+
+    </div>
+
+
+
+</div>
+
+
