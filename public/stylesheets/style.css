@@ -1,8 +1,9 @@
 body {
-  padding: 50px;
+  padding: 20px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   font-family: 'STIX Two Math', serif;
+  background-image: linear-gradient(to right, #19384C, #CAD4E7)
 }
 
 a {
@@ -24,7 +25,7 @@ h1 {
 }
 
 .navbar {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .navbar-text {
@@ -107,11 +108,6 @@ border: none;
 .bluebutton :hover {
   background-color: thistle;
 }
-
-
-
-
-
 
 
 
@@ -270,4 +266,32 @@ a:hover {
       margin-top: 50px !important;
       margin-bottom: 50px !important
   }
+}
+
+.card {
+  margin-top: 100px;
+}
+
+.card-img {
+  width: 1380px;
+  height: 400px;
+  
+}
+
+.card-title {
+  margin-top: 50px;
+  font-size: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-title2 {
+  margin-top: 60px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
