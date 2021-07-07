@@ -1,8 +1,9 @@
 body {
-  padding: 50px;
+  padding: 20px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   font-family: 'STIX Two Math', serif;
+  background-image: linear-gradient(to right, #19384C, #CAD4E7)
 }
 
 a {
@@ -24,7 +25,7 @@ h1 {
 }
 
 .navbar {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .navbar-text {
@@ -38,15 +39,21 @@ footer {
   width: 100%;
 }
 
+#ifLogged {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 #bttLo {
-background: rgb(84, 83, 112);
-background: radial-gradient(circle, rgba(84, 83, 112, 0.7290266448376226) 63%, rgba(202, 217, 231, 1) 100%);
-border: none;
+  background-color: transparent;
+  border: none;
 }
 
 .credits {
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
+  height: 40px;
 }
 
 

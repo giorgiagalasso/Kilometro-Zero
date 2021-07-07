@@ -62,12 +62,12 @@
       
       <div class="container p-4 pb-0">
         
-        <section class="mb-2">
+        <section class="mb-1" id="ifLogged">
           {{#if loggedInUser}}
           
              
             <form action="/logout" method="POST">
-              <h6>Hello <strong>{{loggedInUser.username}}</strong>! If this isn't you, please </h6><button id="bttLo" type="submit" class="btn btn-light btn-rounded btn-sm">Logout</button>
+              <h6>Hello <strong>{{loggedInUser.username}}</strong>! If this isn't you, please <button id="bttLo" type="submit" class="btn btn-light btn-rounded btn-sm"><strong>LOGOUT</strong></button></h6>
             </form>
 
           {{/if}}
