@@ -1,8 +1,10 @@
 body {
-  padding: 50px;
+  padding: 20px 20px 0px 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  background: rgb(84, 83, 112);
+  background: linear-gradient(90deg, rgba(84, 83, 112, 1) 0%, rgba(202, 217, 231, 1) 100%);
 }
 
 a {
@@ -23,9 +25,8 @@ h1 {
   align-items: center;
 }
 
-
-body {
-  background-color: #CAD4E7;
+.navbar {
+  border-radius: 20px;
 }
 
 .navbar-text {
@@ -36,13 +37,18 @@ body {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
+  width: 100%;
+}
+
+#bttLo {
+background: rgb(84, 83, 112);
+background: radial-gradient(circle, rgba(84, 83, 112, 0.7290266448376226) 63%, rgba(202, 217, 231, 1) 100%);
+border: none;
+}
+
+.credits {
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
 }
 
 
@@ -59,6 +65,12 @@ footer {
   align-items: center;
   margin: 60px;
   padding: 40px;
+}
 
-
+.index-admin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px;
+  padding: 40px;
 }
