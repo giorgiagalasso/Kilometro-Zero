@@ -89,7 +89,12 @@ router.get("/usersList", async (req, res) => {
 })
 
 
+router.post("/edit", async (req, res) => {
+    const {username, email, address} = req.body;
+    await User.findByIdAndUpdate(req.session.currentUser._id, {username: username, email: email, address: address })
 
+    res.redirect("/profile")
+})
 
 
 module.exports = router;

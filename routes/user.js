@@ -10,8 +10,9 @@ function requireLogin(req, res, next) {
     }
 };
 
-router.get("/profile", (req, res) => {
-    res.render ("user/profile");
+router.get("/profile", async (req, res) => {
+    const userDetail = await User.findById(req.session.currentUser._id);
+    res.render ("user/profile", {userDetail});
 });
 
 router.post("/favourites/:productId", async(req,res) => {
