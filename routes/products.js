@@ -47,7 +47,7 @@ router.post("/product-create", fileUpload.single("image"), async (req, res) => {
         fileUrlOnCloudinary = req.file.path;
     };
     
-    const {name, category, description, rating, price, helpfulUrl, reviews} = req.body;
+    const {name, category, description, rating, price, helpfulUrl} = req.body;
     await Product.create({
         name,
         category,
@@ -55,7 +55,6 @@ router.post("/product-create", fileUpload.single("image"), async (req, res) => {
         rating,
         price, 
         helpfulUrl,
-        reviews,
         imageUrl: fileUrlOnCloudinary,
     });
     res.redirect("/");
@@ -70,7 +69,7 @@ router.get("/products/:productId/edit", requireAdmin, async (req, res) => {
 
 router.post("/products/:productId/edit", fileUpload.single("image"), async (req, res) => {
      
-    const {name, category, description, rating, price, helpfulUrl, reviews} = req.body;
+    const {name, category, description, rating, price, helpfulUrl} = req.body;
 
     if (req.file){
         let fileUrlOnCloudinary = req.file.path;
@@ -81,7 +80,6 @@ router.post("/products/:productId/edit", fileUpload.single("image"), async (req,
             rating,
             price, 
             helpfulUrl,
-            reviews,
             imageUrl: fileUrlOnCloudinary,
         });
     } else {
@@ -92,7 +90,6 @@ router.post("/products/:productId/edit", fileUpload.single("image"), async (req,
             rating,
             price, 
             helpfulUrl,
-            reviews
         });
     }
    

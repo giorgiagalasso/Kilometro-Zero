@@ -1,55 +1,64 @@
+<div class="container px-4 py-5 mx-auto">
+    <div class="card card0">
+        <div class="d-flex flex-lg-row flex-column-reverse">
+            <div class="card card1 what-am-i-1">
+                <div class="row justify-content-center my-auto">
+                    <div class="col-md-8 col-10 my-5">
+                        <div class="row justify-content-center px-3 mb-3">
+                            <img src="{{imageUrl}}" alt="productImg" width="auto" height="300px">
+                        </div>
+                        <h3 class="mb-5 text-center heading">Did you try this product?</h3>
+                        <h6 class="msg-info">Please leave a review to keep our community informed!</h6>
+                        
+                        <form action="/reviews/{{id}}/add" method="POST">
 
-<h1>{{name}}</h1>
+                            <div class="form-group"> 
 
-<img src="{{imageUrl}}" alt="productImg" width="200px" height="200px">
+                                <label class="form-control-label text-muted">Username</label>
+                                <input type="text" id="uname" name="username" placeholder="Username" class="form-control" required /> 
+                            </div>
 
-<p>Description: {{description}}</p>
+                            <div class="form-group">
+                                
+                                <label class="form-control-label text-muted">Review</label>
+                                <textarea name="comment" id="comm" placeholder="Type your review here!" class="form-control" required></textarea>
+                            </div>
 
-<p>Category: {{category}}</p>
+                            <div class="row justify-content-center my-3 px-3"> 
+                                <button class="btn-block btn-color" type="submit">Submit!</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="bottom text-center mb-5">
+                    {{#unless reviews}}
+                    <h6>No comments have been made!</h6>
+                    {{/unless}}
 
-<p>Rating: {{rating}}</p>
+                    {{#each reviews}}
+                    <h6>{{username}}:</h6>
+                    <p>{{comment}}</p>
+                    <hr>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="my-auto mx-md-5 px-md-5 right details-text">
+                    <h3 class="text-white">{{name}}</h3>
+                    <p>Description: {{description}}</p>                    
+                    <p>Category: {{category}}</p>                    
+                    <p>Rating: {{rating}}</p>                    
+                    <p>Price: {{price}}</p>                    
+                    <p>Helpful link: <a href="{{helpfulUrl}}">{{helpfulUrl}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>Price: {{price}}</p>
-
-<p>Helpful link: <a href="{{helpfulUrl}}">{{helpfulUrl}}</a></p>
-
-<p>Reviews: {{reviews}} </p>
 
 
-{{#if loggedInUser}}
-{{#eq loggedInUser.role "Admin"}}
-<a href="/products/{{_id}}/edit">Edit Product</a>
-{{/eq}}
-{{/if}}
-
-
-
-
-
-<hr>
-
-<p>Add Review</p>
-
-<form action="/reviews/{{id}}/add" method="POST">
-    <label>Username</label>
-    <input type="text" name="username" />
-
-    <label>Comment</label>
-    <textarea name="comment"></textarea>
-
-    <button type="submit">Review!</button>
 </form>
-
-<hr>
-
-<h3>All reviews</h3>
-
-{{#unless reviews}}
-    <h2>No comments have been made!</h2>
-{{/unless}}
-
-{{#each reviews}}
-    <h4>{{username}}:</h4>
-    <p>{{comment}}</p>
-    <hr>
-{{/each}}
+{{#if errorMessage}}
+<p>{{errorMessage}}</p>
+{{/if}}

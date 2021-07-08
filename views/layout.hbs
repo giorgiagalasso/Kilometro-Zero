@@ -45,7 +45,7 @@
           </li>
           {{#if loggedInUser}}
             <li class="nav-item">
-              <a class="nav-link" href="/favourites">♥</a>
+              <a  href="/favourites">♥</a>
             </li>
           {{/if}}
           {{#if loggedInUser}}
@@ -53,10 +53,21 @@
               <a class="nav-link" href="/profile">Profile</a>
             </li>
           {{/if}}
+          {{#if loggedInUser}}
+          <li class="nav-item">
+            {{#eq loggedInUser.role "Admin"}}
+            <a class="nav-link" href="/productlist">All Products</a>
+            {{/eq}}
+          </li>
+          {{/if}}
         </ul>
         <div class="navbar-text col-8">
+          {{#if loggedInUser}}
+
+          {{else}}
           <a class="nav-link" href="/login">Log In</a>
           <a class="nav-link" href="/signup">Sign Up</a>
+          {{/if}}
         </div>
       </div>
    </nav>

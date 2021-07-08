@@ -29,6 +29,7 @@ h1 {
 }
 
 footer {
+  margin-top: 60px;
   width: 100%;
 }
 
@@ -152,6 +153,22 @@ footer {
 .prod-view-cards {
   margin: 20px 20px 20px 20px;
   height: 500px;
+}
+
+.details-text {
+  color: ivory;
+}
+
+.details-text a {
+  color:lightgray;
+}
+
+.admin-control {
+  margin-top: 20px;
+}
+
+.admin-create {
+  margin-bottom: 20px;
 }
 
 /* Admin CRUD end  ------------------------------------------------------------------------------*/

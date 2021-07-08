@@ -1,22 +1,29 @@
 const {Schema, model} = require("mongoose");
 
 
-const ProductSchema = new Schema ({
+const ProductSchema = new Schema(
+  {
     name: String,
     category: String,
     description: String,
-    rating: Number,
+    rating: {
+      type: Number,
+      min: 0,
+      max:10,
+    },
     price: String,
     helpfulUrl: String,
-    reviews: [{ 
+    reviews: [
+      {
         username: String,
         comment: String,
-    }],
-    imageUrl: String, 
-    },
-    {
+      },
+    ],
+    imageUrl: String,
+  },
+  {
     timestamps: true,
-    }
+  }
 );
 
 
