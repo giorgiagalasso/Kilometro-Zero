@@ -57,7 +57,7 @@ router.post("/product-create", fileUpload.single("image"), async (req, res) => {
         helpfulUrl,
         imageUrl: fileUrlOnCloudinary,
     });
-    res.redirect("/");
+    res.redirect("/productlist");
 });
 
 
