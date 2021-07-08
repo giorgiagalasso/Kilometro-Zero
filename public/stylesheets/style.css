@@ -447,9 +447,19 @@ textarea:focus {
 
 /* favorites page ends */
 
+#product-list-for-admin {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px 20px 10px 20px;
 
+}
 
-
+.product-create-css {
+  color: #CAD4E7;
+  margin-bottom: 20px;
+}
 
 
 

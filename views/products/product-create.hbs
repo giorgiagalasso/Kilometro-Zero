@@ -1,28 +1,39 @@
 
-<h1>Create New Product</h1>
+<div class="container px-4 py-5 mx-auto">
+    <div class="card card0">
+        <div class="d-flex flex-lg-row flex-column-reverse">
+            <div class="card card1">
+                <div class="row justify-content-center my-auto">
+                    <div class="col-md-8 col-10 my-5">
+                        <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="https://res.cloudinary.com/b-jb/image/upload/v1625664971/kilometro-zero/logo1_mzsmce.png"></div>
+                        <h6 class="msg-info">Create A New Product Below</h6>
+                        
+                        <form action="/product-create" method="POST" enctype="multipart/form-data">
 
-<form action="/product-create" method="POST" enctype="multipart/form-data">
-    
-    <label>Name</label>
-    <input type="text" name="name" required/>
-    
-    <label>Category</label>
-    <input type="text" name="category" required />
-    
-    <label>Desciption</label>
-    <textarea row="3" cols="10" name="description" required></textarea>
-    
-    <label>Rating</label>
-    <input type="number" name="rating" min="0" max="10" required/>
-    
-    <label>Price</label>
-    <input type="text" name="price" required />
-    
-    <label>Helpful Link</label>
-    <input type="text" name="helpfulUrl" required />
-    
-    <label>Image</label>
-    <input type="file" name="image" required/>
-    
-    <button type="submit">Create</button>
-</form>
+                        <div class="form-group"> <label class="form-control-label text-muted">Name</label> <input type="text" id="email" name="name" placeholder="Name" class="form-control"  required> </div>
+                        
+                        <div class="form-group"> <label class="form-control-label text-muted">Category</label> <input type="text" id="psw" name="category" placeholder="Category" class="form-control"  required> </div>
+                        
+                        <div class="form-group"> <label class="form-control-label text-muted">Description</label> <textarea row="3"  id="psw" name="description" placeholder="Description" class="form-control" required> </textarea> </div>
+                        
+                        <div class="form-group"> <label class="form-control-label text-muted">Rating</label> <input type="number" id="psw" name="rating" placeholder="Rating" min="0" max="10" class="form-control"  required> </div>
+                        
+                        <div class="form-group"> <label class="form-control-label text-muted">Price</label> <input type="text" id="psw" name="price" placeholder="Price" class="form-control" required> </div>
+                        
+                        <div class="form-group"> <label class="form-control-label text-muted">Helpful Link</label> <input type="text" id="psw" name="helpfulUrl" placeholder="Helpful Link" class="form-control"  required> </div>
+                        
+                        <div class="form-group"> <label class="form-control-label text-muted">Image</label> <input type="file" id="psw" name="image" placeholder="Image" class="form-control"  required> </div>
+                        
+                        <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color" type="submit">Create</button> </div>
+                       </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="my-auto mx-md-5 px-md-5 right">
+                   <h3 class="text-white">Creating Products Accurately For Our Customers</h3> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
