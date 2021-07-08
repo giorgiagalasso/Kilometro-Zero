@@ -1,14 +1,17 @@
-<div class="admin-product-list">
-    <a href="/product-create" class="btn btn-dark bluebutton admin-create">Create a New Product</a>
+<div>
+    <div>
+      <a href="/product-create" class="btn btn-dark bluebutton admin-create">Create a New Product</a>  
+    </div>
     
+    
+    <div class="admin-product-list">
     {{#each products}}
 
     <br>
 
-<div id="product-list-for-admin">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{imageUrl}}" alt="Card image cap">
-        <div class="card-body">
+    <div class="card prod-view-cards" style="width: 18rem;">
+        <img class="card-img-top img-all-prod-views " src="{{imageUrl}}" alt="Card image cap">
+        <div class="card-body admin-cards-body">
             <h5 class="card-title"><a href="/products/{{_id}}">{{name}}</a></h5>
             <a href="/products/{{_id}}/edit" class="btn btn-dark bluebutton admin-control">Edit</a>
             <form action="/products/{{_id}}/delete" method="POST">
@@ -20,5 +23,7 @@
 </div>
     <br>
 
-    {{/each}}    
+    {{/each}}          
+    </div>
+  
 </div>

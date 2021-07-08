@@ -126,6 +126,16 @@ footer {
 
 /* Admin CRUD  ------------------------------------------------------------------------------*/
 
+.admin-product-list {
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   margin: 10px 20px 10px 20px;
+}
+
 .product-views-title{
     display: flex;
     flex-direction: column;
@@ -173,6 +183,7 @@ footer {
 
 .admin-create {
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* Admin CRUD end  ------------------------------------------------------------------------------*/
