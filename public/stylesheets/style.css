@@ -81,14 +81,8 @@ footer {
   margin-top: 50px;
 }
 
-.index-image {
-  width: 1380px;
-  height: 280px !important;
-
-}
-
 .index-image-title1 {
-  margin-top: 50px;
+  margin-top: 125px;
   font-size: 50px;
   display: flex;
   flex-direction: row;
@@ -97,7 +91,7 @@ footer {
 }
 
 .index-image-title2 {
-  margin-top: 60px;
+  margin-top: 100px;
   font-size: 30px;
   display: flex;
   flex-direction: row;
@@ -126,6 +120,14 @@ footer {
 
 /* Admin CRUD  ------------------------------------------------------------------------------*/
 
+.product-views-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
 .product-display {
   display: flex;
   flex-wrap: wrap;
@@ -133,7 +135,24 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  margin: 10px 20px 10px 20px;
 }
+
+.img-all-prod-views {
+  height: 300px;
+  width: auto;
+  object-fit: fill !important;
+}
+
+.body-all-prod-views {
+  margin: 40px 20px 20px 20px;
+}
+
+.prod-view-cards {
+  margin: 20px 20px 20px 20px;
+  height: 500px;
+}
+
 /* Admin CRUD end  ------------------------------------------------------------------------------*/
 
 /* Profile view begin ---------------------------------------------------------------------------*/
@@ -144,7 +163,7 @@ footer {
 
 /* Profile view end ---------------------------------------------------------------------------*/
 
-/* TipsTricks view begin ---------------------------------------------------------------------------*/
+/* TipsTricks + products view begin ---------------------------------------------------------------------------*/
 
 .img-tt {
   height: 200px;
@@ -185,7 +204,7 @@ footer {
   background-color: thistle;
 }
 
-/* TipsTricks view end ---------------------------------------------------------------------------*/
+/* TipsTricks + products view end ---------------------------------------------------------------------------*/
 
 /* Log/Sign view begin ---------------------------------------------------------------------------*/
 
