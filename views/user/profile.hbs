@@ -8,10 +8,10 @@
                         <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="https://res.cloudinary.com/b-jb/image/upload/v1625664971/kilometro-zero/logo1_mzsmce.png"></div>
                         <h3 class="mb-5 text-center heading">We are Kilometro Zero</h3>
                         <h6 class="msg-info">This is your personal account</h6>
-                        <form action="/login" method="POST">
-                        <div class="form-group"> <label class="form-control-label text-muted">Choose Your Username</label> <input type="text" id="email" name="username" placeholder="Username" class="form-control" required> </div>
-                        <div class="form-group"> <label class="form-control-label text-muted">Adress</label> <input type="adress" id="psw" name="password" placeholder="Address" class="form-control" required> </div>
-                        <div class="form-group"> <label class="form-control-label text-muted">Email</label> <input type="email" id="psw" name="password" placeholder="Email" class="form-control" required> </div>
+                        <form action="/edit" method="POST">
+                        <div class="form-group"> <label class="form-control-label text-muted">Choose Your Username</label> <input type="text" id="email" name="username" placeholder="Username" class="form-control" value="{{userDetail.username}}" required> </div>
+                        <div class="form-group"> <label class="form-control-label text-muted">Adress</label> <input type="adress" id="psw" name="address" placeholder="Address" class="form-control" value="{{userDetail.address}}" required> </div>
+                        <div class="form-group"> <label class="form-control-label text-muted">Email</label> <input type="email" id="psw" name="email" placeholder="Email" class="form-control" value="{{userDetail.email}}" required> </div>
                         <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color" type="submit">Edit</button> </div>
                        </form>
                     </div>

@@ -52,6 +52,10 @@ footer {
 /* Layout view  ------------------------------------------------------------------------------*/
 
 /* Index view  ------------------------------------------------------------------------------*/
+.index-image {
+  width: 1398px;
+  height: 400px;
+}
 
 .index {
   display: flex;
@@ -203,6 +207,10 @@ footer {
 
 .bluebutton :hover {
   background-color: thistle;
+}
+
+.product-views-title {
+ color: #CAD4E7;
 }
 
 /* TipsTricks + products view end ---------------------------------------------------------------------------*/
@@ -377,7 +385,8 @@ textarea:focus {
   align-items: center;
   margin-top: 40px;
   text-decoration: underline;
-  
+  font-size: 30px;
+
 }
 
 .name-of-fav-product {
@@ -405,6 +414,27 @@ textarea:focus {
   height: 150px;
   margin-bottom: 20px;
 }
+
+#fav-background-image {
+  width: 900px;
+  height: 190px
+}
+
+#sdhjazdsbadh {
+  margin-top: 30px;
+  margin-left: 200px;
+  width: 900px;
+  height: 190px
+  
+}
+
+/* favorites page ends */
+
+
+
+
+
+
 
 /* CSS END - CSS END -  CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END */
 
