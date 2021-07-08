@@ -126,7 +126,9 @@ footer {
 
 /* Profile view end ---------------------------------------------------------------------------*/
 
-.card img {
+/* TipsTricks view begin ---------------------------------------------------------------------------*/
+
+.img-tt {
   height: 200px;
   object-fit: cover;
 }
@@ -165,33 +167,9 @@ footer {
   background-color: thistle;
 }
 
+/* TipsTricks view end ---------------------------------------------------------------------------*/
 
-
-
-
-input,
-textarea {
-  background-color: #F3E5F5;
-  border-radius: 50px !important;
-  padding: 12px 15px 12px 15px !important;
-  width: 100%;
-  box-sizing: border-box;
-  border: none !important;
-  border: 1px solid #F3E5F5 !important;
-  font-size: 16px !important;
-  color: #000 !important;
-  font-weight: 400
-}
-
-input:focus,
-textarea:focus {
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border: 1px solid  !important;
-  outline-width: 0;
-  font-weight: 400
-}
+/* Log/Sign view begin ---------------------------------------------------------------------------*/
 
 button:focus {
   -moz-box-shadow: none !important;
@@ -201,7 +179,6 @@ button:focus {
 }
 
 .card {
-  border-radius: 0;
   border: none;
 }
 
@@ -293,7 +270,10 @@ a:hover {
   font-size: 15px
 }
 
-/*Login and Auth views ? -------------------------------------------------------------------------*/
+/* Log/Sign view end  ---------------------------------------------------------------------------*/
+
+
+/* Idk whats all this is -------------------------------------------------------------------------*/
 
 @media screen and (max-width: 992px) {
   .card1 {
@@ -324,4 +304,28 @@ a:hover {
       margin-top: 50px !important;
       margin-bottom: 50px !important
   }
+}
+
+input,
+textarea {
+  background-color: #F3E5F5;
+  border-radius: 50px !important;
+  padding: 12px 15px 12px 15px !important;
+  width: 100%;
+  box-sizing: border-box;
+  border: none !important;
+  border: 1px solid #F3E5F5 !important;
+  font-size: 16px !important;
+  color: #000 !important;
+  font-weight: 400
+}
+
+input:focus,
+textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid !important;
+  outline-width: 0;
+  font-weight: 400
 }

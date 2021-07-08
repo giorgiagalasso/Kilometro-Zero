@@ -6,13 +6,18 @@
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="{{imageUrl}}" alt="Card image cap">
       <div class="card-body">
+
         <h5 class="card-title"><a href="/products/{{_id}}">{{name}}</a></h5>
         <p class="card-text">{{description}}</p>
-        <a href="/favourites" class="btn btn-primary">Favorite</a>
+
+        <form action="/favourites/{{_id}}" method="POST">
+          <button type="submit" class="btn btn-dark bluebutton">Favorite</button>
+        </form>
+        
       </div>
     </div>
 
-
   {{/each}}
+  
 </div>
 
