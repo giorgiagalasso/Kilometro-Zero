@@ -1,3 +1,5 @@
+/* Layout view  ------------------------------------------------------------------------------*/
+
 body {
   padding: 20px 20px 0px 20px;
   display: flex;
@@ -13,15 +15,6 @@ a {
 
 h1 {
   color: 15px;
-}
-
-.product-display {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 .navbar {
@@ -56,7 +49,9 @@ footer {
   height: 40px;
 }
 
+/* Layout view  ------------------------------------------------------------------------------*/
 
+/* Index view  ------------------------------------------------------------------------------*/
 .index {
   display: flex;
   flex-direction: column;
@@ -79,6 +74,61 @@ footer {
   margin: 60px;
   padding: 40px;
 
+}
+
+.index-display {
+  margin-top: 100px;
+}
+
+.index-image {
+  width: 1380px;
+  height: 400px;
+
+}
+
+.index-image-title1 {
+  margin-top: 50px;
+  font-size: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.index-image-title2 {
+  margin-top: 60px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Index view end ------------------------------------------------------------------------------*/
+
+/* Admin CRUD  ------------------------------------------------------------------------------*/
+
+.product-display {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* Admin CRUD end  ------------------------------------------------------------------------------*/
+
+/* Profile view begin ---------------------------------------------------------------------------*/
+
+.profile{
+  padding-top: 30px;
+}
+
+/* Profile view end ---------------------------------------------------------------------------*/
+
+.card img {
+  height: 200px;
+  object-fit: cover;
 }
 
 .title {
@@ -152,7 +202,7 @@ button:focus {
 
 .card {
   border-radius: 0;
-  border: none
+  border: none;
 }
 
 .card1 {
@@ -243,6 +293,8 @@ a:hover {
   font-size: 15px
 }
 
+/*Login and Auth views ? -------------------------------------------------------------------------*/
+
 @media screen and (max-width: 992px) {
   .card1 {
       width: 100%;
@@ -272,58 +324,4 @@ a:hover {
       margin-top: 50px !important;
       margin-bottom: 50px !important
   }
-}
-
-.index-display {
-  margin-top: 100px;
-}
-.index-image {
-  width: 1380px;
-  height: 400px;
-}
-.index-image-title1 {
-  margin-top: 50px;
-  font-size: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.index-image-title2 {
-  margin-top: 60px;
-  font-size: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.selfcare {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 40px;
-}
-
-.togo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 40px;
-}
-
-.ecohome {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 40px;
 }
