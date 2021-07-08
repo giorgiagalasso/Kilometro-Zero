@@ -1,26 +1,50 @@
-<h1>Edit Product</h1>
+<div class="container px-4 py-5 mx-auto">
+    <div class="card card0">
+        <div class="d-flex flex-lg-row flex-column-reverse">
+            <div class="card card1">
+                <div class="row justify-content-center my-auto">
+                    <div class="col-md-8 col-10 my-5">
+                        <div class="row justify-content-center px-3 mb-3"> <img id="logo"
+                                src="https://res.cloudinary.com/b-jb/image/upload/v1625664971/kilometro-zero/logo1_mzsmce.png">
+                        </div>
+                        <h6 class="msg-info">Edit an Existing Product Below</h6>
 
-<form action="/products/{{productsToEdit._id}}/edit" method="POST"  enctype="multipart/form-data">
-    <label>Name</label>
-    <input type="text" name="name" value="{{productsToEdit.name}}" />
+                        <form action="/products/{{productsToEdit._id}}/edit" method="POST" enctype="multipart/form-data">
 
-    <label>Category</label>
-    <input type="text" name="category" value="{{productsToEdit.category}}"/>
-    
-    <label> Description</label>
-    <textarea row="3" cols="10" name="description">{{productsToEdit.description}}</textarea>
-    
-    <label>Rating</label>
-    <input type="number" name="rating" value={{productsToEdit.rating}}/>
-    
-    <label>Price</label>
-    <input type="text" name="price" value="{{productsToEdit.price}}"/>
-    
-    <label>Link</label>
-    <input type="text" name="helpfulUrl" value="{{productsToEdit.helpfulUrl}}"/> 
-    
-    <label>Image</label>
-    <input type="file" name="image" />
-    
-    <button type="submit">Update</button>
-</form>
+                            <div class="form-group"> <label class="form-control-label text-muted">Name</label>
+                            <input type="text" name="name" placeholder="Name" class="form-control" value="{{productsToEdit.name}}" required> </div>
+
+                            <div class="form-group"> <label class="form-control-label text-muted">Category</label>
+                                <input type="text" name="category" placeholder="Category" class="form-control" value="{{productsToEdit.category}}" required>
+                            </div>
+
+                            <div class="form-group"> <label class="form-control-label text-muted">Description</label>
+                                <textarea row="3" name="description" placeholder="Description" class="form-control"
+                                    required>{{productsToEdit.description}}</textarea> </div>
+
+                            <div class="form-group"> <label class="form-control-label text-muted">Rating</label> 
+                            <input type="number" name="rating" placeholder="Rating" min="0" max="10" class="form-control" value={{productsToEdit.rating}} required> </div>
+
+                            <div class="form-group"> <label class="form-control-label text-muted">Price</label> <input
+                                    type="text" name="price" placeholder="Price" class="form-control" value="{{productsToEdit.price}}" required> </div>
+
+                            <div class="form-group"> <label class="form-control-label text-muted">Helpful Link</label>
+                                <input type="text" name="helpfulUrl" placeholder="Helpful Link" class="form-control" value="{{productsToEdit.helpfulUrl}}" required> </div>
+
+                            <div class="form-group"> <label class="form-control-label text-muted">Image</label> <input
+                                    type="file" name="image" placeholder="Image" class="form-control" required> </div>
+
+                            <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color"
+                                    type="submit">Edit</button> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="my-auto mx-md-5 px-md-5 right">
+                    <h3 class="text-white">Editing Products Accurately For Our Community</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
