@@ -122,6 +122,7 @@ footer {
   justify-content: space-evenly;
 }
 
+
 /* Index view end ------------------------------------------------------------------------------*/
 
 /* Admin CRUD  ------------------------------------------------------------------------------*/
@@ -348,5 +349,43 @@ textarea:focus {
   font-weight: 400
 }
 
+/*favourites view */
+
+.favourites {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  text-decoration: underline;
+  
+}
+
+.name-of-fav-product {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.fav-items-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#fav-item-delete {
+  margin-bottom: 30px;
+}
+
+#fav-product-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
 
 /* CSS END - CSS END -  CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END - CSS END */
+

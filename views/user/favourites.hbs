@@ -1,12 +1,27 @@
-<h1>My favourite products</h1>
+<h2 class="favourites">My Favourite Products</h2>
 
 
 
 
 
+
+
+<div class="fav-items-container">
+<div class="name-of-fav-product">
 {{#each favourites}}
-<p> name -> {{product.name}} </p>
+
+<img class="card-img-top" id="fav-product-img" src="{{product.imageUrl}}" alt="Card image cap">
+
+<p>{{product.name}}</p>
+<p>{{product.description}}</p>
+
+
 <form action="/favourites/{{id}}/delete" method="POST">
-    <button type="submit">Delete</button>
+    <button type="submit" class="btn-dark bluebutton" id="fav-item-delete">Delete</button>
 </form>
+
+<hr> 
+
 {{/each}}
+</div>
+</div>

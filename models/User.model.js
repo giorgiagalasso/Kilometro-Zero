@@ -11,6 +11,12 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+  },
+  address: {
+    type: String,
+  },
   role: String, //Admin, Reader, Guest, Superuser , etc
   imageUrl: String,
 });
