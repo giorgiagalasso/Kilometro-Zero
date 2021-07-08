@@ -77,12 +77,12 @@ footer {
 }
 
 .index-display {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .index-image {
   width: 1380px;
-  height: 400px;
+  height: 280px !important;
 
 }
 
@@ -102,6 +102,23 @@ footer {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.article-selection-title {
+  margin-top: 50px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+#article-selection-index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /* Index view end ------------------------------------------------------------------------------*/
