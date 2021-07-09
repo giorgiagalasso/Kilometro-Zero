@@ -446,7 +446,7 @@ textarea:focus {
   align-items: center;
   margin-top: 40px;
   text-decoration: underline;
-  font-size: 30px;
+  font-size: 20px;
 
 }
 
@@ -463,17 +463,18 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 #fav-item-delete {
   margin-bottom: 30px;
+  font-size: 15px;
 }
 
 #fav-product-img {
   width: 150px;
   height: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 #fav-background-image {
@@ -481,13 +482,6 @@ textarea:focus {
   height: 190px
 }
 
-#sdhjazdsbadh {
-  margin-top: 30px;
-  margin-left: 200px;
-  width: 900px;
-  height: 190px
-  
-}
 
 /* favorites page ends */
 

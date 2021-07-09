@@ -1,22 +1,25 @@
  <h5 class="card-title favourites product-views-title">My Favourite Products</h5>
 
-
 <div class="fav-items-container">
-    <div class="name-of-fav-product">
-        {{#each favourites}}
+<div class="name-of-fav-product">
+  {{#each favourites}}
 
-            <img class="card-img-top" id="fav-product-img" src="{{product.imageUrl}}" alt="Card image cap">
+    <div class="card prod-view-cards" style="width: 18rem;">
+      <img class="card-img-top img-all-prod-views" src="{{product.imageUrl}}" alt="Card image cap">
+      <div class="card-body body-all-prod-views">
 
-            <p>{{product.name}}</p>
-            <p>{{product.description}}</p>
+        <h5 class="card-title"><a href="/products/{{_id}}">{{product.name}}</a></h5>
+        <h5 class="card-title"><a href="/products/{{_id}}">{{product.description}}</a></h5>
 
 
-            <form action="/favourites/{{id}}/delete" method="POST">
+         <form action="/favourites/{{id}}/delete" method="POST">
                 <button type="submit" class="btn-dark bluebutton" id="fav-item-delete">Delete</button>
             </form>
-
-            <hr> 
-
-        {{/each}}
+        
+      </div>
     </div>
+
+  {{/each}}
+  
+</div>
 </div>
