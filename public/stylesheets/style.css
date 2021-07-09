@@ -5,7 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'STIX Two Math', serif;
-  background-image: linear-gradient(to right, #19384C, #CAD4E7)
+  background-color: #19384C
 }
 
 a {
@@ -31,6 +31,14 @@ h1 {
 footer {
   margin-top: 60px;
   width: 100%;
+}
+
+.footer-text {
+  color: #CAD4E7 !important;
+}
+
+.footer-text2 {
+  color: #CAD4E7 !important;
 }
 
 #ifLogged {
@@ -107,7 +115,7 @@ footer {
 .article-selection-title {
   margin-top: 50px;
   font-size: 20px;
-  color: white;
+  color: #CAD4E7;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -296,7 +304,7 @@ button:focus {
 
 .card2 {
   width: 50%;
-  background-image: linear-gradient(to right, #19384C, #CAD4E7)
+  background-image: linear-gradient(to left, #19384C, #CAD4E7)
 }
 
 #logo {
@@ -334,7 +342,7 @@ button:focus {
 .btn-color {
   border-radius: 50px;
   color: #fff;
-  background-image: linear-gradient(to right, #19384C, #CAD4E7);
+  background-image: linear-gradient(to left, #19384C, #CAD4E7);
   padding: 15px;
   cursor: pointer;
   border: none !important;
@@ -343,7 +351,7 @@ button:focus {
 
 .btn-color:hover {
   color: #fff;
-  background-image: linear-gradient(to right, #19384C, #CAD4E7)
+  background-image: linear-gradient(to left, #19384C, #CAD4E7)
 }
 
 .btn-white {
@@ -357,7 +365,7 @@ button:focus {
 
 .btn-white:hover {
   color: #fff;
-  background-image: linear-gradient(to right, #19384C, #CAD4E7)
+  background-image: linear-gradient(to left, #19384C, #CAD4E7)
 }
 
 a {

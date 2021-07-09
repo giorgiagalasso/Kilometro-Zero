@@ -82,8 +82,8 @@
           {{#if loggedInUser}}
           
              
-            <form action="/logout" method="POST">
-              <h5>Hello <strong>{{loggedInUser.username}}</strong>! If this isn't you, please <button id="bttLo" type="submit" class="btn btn-light btn-rounded btn-sm"><strong><u>LOGOUT</u></strong></button></h5>
+            <form class="footer-text" action="/logout" method="POST">
+              <h5>Hello <strong>{{loggedInUser.username}}</strong>! If this isn't you, please <button id="bttLo" type="submit" class="btn btn-light btn-rounded btn-sm footer-text"><strong><u>LOGOUT</u></strong></button></h5>
             </form>
 
           {{/if}}
@@ -93,9 +93,9 @@
       </div>
       
       
-      <div class="text-center p-3 credits" style="background-color: rgba(0, 0, 0, 0.2);">
+      <div class="text-center p-3 credits" style="background-color: rgba(0, 0, 0, 0.5);">
 
-       <p>By <a class="text-black" href="https://github.com/BeatrizJB">Beatriz</a> and <a class="text-black" href="https://github.com/giorgiagalasso">Giorgia</a></p> 
+       <p class="footer-text">By <a class="text-black footer-text2" href="https://github.com/BeatrizJB">Beatriz</a> and <a class="text-black footer-text2" href="https://github.com/giorgiagalasso">Giorgia</a></p> 
         
       </div>
      
