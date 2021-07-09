@@ -65,7 +65,7 @@
           {{#if loggedInUser}}
 
           {{else}}
-          <a class="nav-link" href="/login">Log In</a>
+          <a class="nav-link" href="/login">Login</a>
           <a class="nav-link" href="/signup">Sign Up</a>
           {{/if}}
         </div>
@@ -83,7 +83,7 @@
           
              
             <form action="/logout" method="POST">
-              <h6>Hello <strong>{{loggedInUser.username}}</strong>! If this isn't you, please <button id="bttLo" type="submit" class="btn btn-light btn-rounded btn-sm"><strong>LOGOUT</strong></button></h6>
+              <h5>Hello <strong>{{loggedInUser.username}}</strong>! If this isn't you, please <button id="bttLo" type="submit" class="btn btn-light btn-rounded btn-sm"><strong><u>LOGOUT</u></strong></button></h5>
             </form>
 
           {{/if}}

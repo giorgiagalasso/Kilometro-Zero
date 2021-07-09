@@ -12,27 +12,29 @@
                         <form action="/products/{{productsToEdit._id}}/edit" method="POST" enctype="multipart/form-data">
 
                             <div class="form-group"> <label class="form-control-label text-muted">Name</label>
-                            <input type="text" name="name" placeholder="Name" class="form-control" value="{{productsToEdit.name}}" required> </div>
+                            <input type="text" name="name" placeholder="Name" class="form-control" value="{{productsToEdit.name}}"> </div>
 
                             <div class="form-group"> <label class="form-control-label text-muted">Category</label>
-                                <input type="text" name="category" placeholder="Category" class="form-control" value="{{productsToEdit.category}}" required>
+                                <input type="text" name="category" placeholder="Category" class="form-control" value="{{productsToEdit.category}}" >
                             </div>
 
                             <div class="form-group"> <label class="form-control-label text-muted">Description</label>
-                                <textarea row="3" name="description" placeholder="Description" class="form-control"
-                                    required>{{productsToEdit.description}}</textarea> </div>
+                                <textarea row="3" name="description" placeholder="Description" class="form-control">{{productsToEdit.description}}</textarea> </div>
 
                             <div class="form-group"> <label class="form-control-label text-muted">Rating</label> 
-                            <input type="number" name="rating" placeholder="Rating" min="0" max="10" class="form-control" value={{productsToEdit.rating}} required> </div>
+                            <input type="number" name="rating" placeholder="Rating" min="0" max="10" class="form-control" value={{productsToEdit.rating}} > </div>
 
                             <div class="form-group"> <label class="form-control-label text-muted">Price</label> <input
-                                    type="text" name="price" placeholder="Price" class="form-control" value="{{productsToEdit.price}}" required> </div>
+                                    type="text" name="price" placeholder="Price" class="form-control" value="{{productsToEdit.price}}" > </div>
 
                             <div class="form-group"> <label class="form-control-label text-muted">Helpful Link</label>
-                                <input type="text" name="helpfulUrl" placeholder="Helpful Link" class="form-control" value="{{productsToEdit.helpfulUrl}}" required> </div>
+                                <input type="text" name="helpfulUrl" placeholder="Helpful Link" class="form-control" value="{{productsToEdit.helpfulUrl}}"> </div>
 
-                            <div class="form-group"> <label class="form-control-label text-muted">Image</label> <input
-                                    type="file" name="image" placeholder="Image" class="form-control" required> </div>
+                            <div class="file-input">
+                                <input type="file" id="file" class="file img-input" name="image"><label for="file">Image</label>
+                            </div>
+                                
+                
 
                             <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color"
                                     type="submit">Edit</button> </div>
