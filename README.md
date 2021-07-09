@@ -19,9 +19,10 @@ The website is divided in two parts:
 For the development of this project the following technologies were used
 
 - CSS
+- HTML
 - Javascript
-- NodeJS
-- ExpressJS
+- Node.js
+- Express.js
 - MongoDB
 - Mongoose
 - Handlebars
