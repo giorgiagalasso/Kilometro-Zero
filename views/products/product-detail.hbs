@@ -7,6 +7,7 @@
                         <div class="row justify-content-center px-3 mb-3">
                             <img src="{{imageUrl}}" alt="productImg" width="auto" height="300px">
                         </div>
+                        {{#if loggedInUser}}
                         <h3 class="mb-5 text-center heading">Did you try this product?</h3>
                         <h6 class="msg-info">Please leave a review to keep our community informed!</h6>
                         
@@ -28,6 +29,7 @@
                                 <button class="btn-block btn-white btn" type="submit">Submit!</button>
                                 </div>
                         </form>
+                        {{/if}}
                     </div>
                 </div>
                 <div class="bottom text-center mb-5">
