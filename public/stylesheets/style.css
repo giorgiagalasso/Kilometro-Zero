@@ -33,6 +33,10 @@ footer {
   width: 100%;
 }
 
+.push-footer {
+  height: px;
+}
+
 .footer-text {
   color: #CAD4E7 !important;
 }
@@ -270,8 +274,8 @@ color: #CAD4E7;
   color: #2B3863;
   border: none;
   border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .bluebutton :hover {
