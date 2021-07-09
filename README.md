@@ -9,8 +9,10 @@ This project was developed at Ironhack for Module 2. The purpose was to develop 
 Kilometro-Zero is the pre-conception of a future sustainable online store in mind.
 
 The website is divided in two parts:
-- the user side and the admin side;
-- the user can interact immediatly with our Tips&Tricks and Store page, but if they want to have a favorite list they need to sign up and log in
+
+- the User side and the Admin side;
+- the User can interact immediatly with our Product Details, Tips & Tricks and Store page, but if they want to have a favorite list they need to sign up and log in;
+- the Admin has interaction with all the products, being the only ones able to Create, Update and Delete them.
 
 ## Tech
 
