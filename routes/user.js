@@ -24,7 +24,7 @@ router.post("/favourites/:productId", async(req,res) => {
 });
 
 
-router.get("/favourites", async (req, res) => {
+router.get("/favourites", requireLogin, async (req, res) => {
     let favourites = await Favourite.find({
         user: req.session.currentUser,
     }).populate('product');
@@ -40,6 +40,8 @@ router.post("/favourites/:productId/delete", requireLogin, async (req, res) => {
     await Favourite.findByIdAndDelete(req.params.productId);
     res.redirect("/favourites");
 });
+
+
 
 
 
